@@ -27,7 +27,6 @@ module.exports = (_ => {
             return class PrivScr extends Plugin {
                 onStart() {
                     BDFDB.ListenerUtils.add(BDFDB, document, "keydown.BDFDBPressedKeys", e => {
-                        console.log(e)
                         if (e.type == "keydown") {
                             if (e.key == "Alt") {
                                 enabled = enabled ? false : true;
